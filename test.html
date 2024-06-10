@@ -1,0 +1,64 @@
+<head>
+  <Title>FizzBuzz</Title>
+</head>
+<body>
+  <h1>Fizz Buzz Generator</h1>
+  <p>Select an option to generate a Fizz Buzz sequence</p>
+  <div>
+    <button id="ten">1-10</button>
+    <button id="hnd">1-100</button>
+    <button id="thd">1-1000</button>
+    <button id="clr" style="background-color: gray";>1-10</button>
+  </div>
+  <p id="result"></p>
+</body>
+
+<script>
+  let ten = document.querySelector("#ten");
+  let hnd = document.querySelector("#hnd");
+  let thd = document.querySelector("#thd");
+  let clr = document.querySelector("#clr");
+  let res = document.querySelector("#result");
+  ten.addEventListener("click", genTen);
+  hnd.addEventListener("click", genHnd);
+  thd.addEventListener("click", genThd);
+  clr.addEventListener("click", clrNum);
+
+  let count = 0;
+  function genTen {
+    genFizz(10);
+  }
+  function genHnd {
+    genFizz(100);
+  }
+  function genThd {
+    genFizz(1000);
+  }
+  function genFizz(count) {
+    for (let num = 1; num <= count; num++}
+    if (num % 15 == 0) {
+      res.innerHTML += "FizzBuzz, ";
+    }
+    else if (num % 3 == 0) {
+      res.innerHTML += "Fizz, ";
+    }
+    else if (num % 5 == 0) {
+      res.innerHTML += "Buzz, ";
+    }
+    else if (num) {
+      res.innerHTML += num + ", ";
+    }
+  }
+  function clrNum {
+    res.innerHTML = "";
+  }
+</script>
+
+<style>
+  body {
+    margin: 5em;
+    color: white;
+    background-color: gray;
+    font-family:
+  }
+</style>
