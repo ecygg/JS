@@ -1,0 +1,129 @@
+<head>
+    <title>FizzBuzz Project</title>
+<body>
+    <h1>Fizz Buzz</h1>
+    <p>Choose an option that will generate a Fizz Buzz sequence</p>
+    <div>
+        <button id="ten">1-10</button>
+        <button id="hnd">1-100</button>
+        <button id="thd">1-1000</button>
+        <button id="tenK">1-10000</button>
+        <!--<button id="hndK">1-100000</button>-->
+        <button id="clr", style="background-color: rgb(172, 172, 172);">Clear</button>
+    </div>
+    <p id="result"></p>
+</body>
+</head>
+
+<script>
+    let ten = document.querySelector("#ten");
+    let hnd = document.querySelector("#hnd");
+    let thd = document.querySelector("#thd");
+    let tenK = document.querySelector("#tenK");
+    //let hndK = document.querySelector("#hndK");
+    let numClear = document.querySelector("#clr");
+    let res = document.querySelector("#result");
+    ten.addEventListener("click",genTen);
+    hnd.addEventListener("click",genHnd);
+    thd.addEventListener("click",genThd);
+    tenK.addEventListener("click",genTenK);
+    //hndK.addEventListener("click",genHndK);
+    numClear.addEventListener("click",clrNum);
+
+   
+    function genTen() {
+        for (let fb = 1; fb <= 10; fb++) {
+            if (fb % 15 == 0) {
+                res.innerHTML += "FizzBuzz, ";
+            }
+            else if (fb % 3 == 0) {
+                res.innerHTML += "Fizz, ";
+            }
+            else if (fb % 5 == 0) {
+                res.innerHTML += "Buzz, ";
+            }
+            else if (fb) {
+                res.innerHTML += fb + ", ";
+            }
+        }
+    }
+    function genHnd() {
+        for (let fb = 1; fb <= 100; fb++) {
+            if (fb % 15 == 0) {
+                res.innerHTML += "FizzBuzz, ";
+            }
+            else if (fb % 3 == 0) {
+                res.innerHTML += "Fizz, ";
+            }
+            else if (fb % 5 == 0) {
+                res.innerHTML +="Buzz, ";
+            }
+            else if (fb) {
+                res.innerHTML += fb + ", ";
+            }
+        }
+
+    }
+    function genThd() {
+        for (let fb = 1; fb <= 1000; fb++) {
+            if (fb % 15 == 0) {
+                res.innerHTML += "FizzBuzz, ";
+            }
+            else if (fb % 3 == 0) {
+                res.innerHTML += "Fizz, ";
+            }
+            else if (fb % 5 == 0) {
+                res.innerHTML +="Buzz, ";
+            }
+            else if (fb) {
+                res.innerHTML += fb + ", ";
+            }
+        }
+    }
+    function genTenK() {
+        for (let fb = 1; fb <= 10000; fb++) {
+            if (fb % 15 == 0) {
+                res.innerHTML += "FizzBuzz, ";
+            }
+            else if (fb % 3 == 0) {
+                res.innerHTML += "Fizz, ";
+            }
+            else if (fb % 5 == 0) {
+                res.innerHTML +="Buzz, ";
+            }
+            else if (fb) {
+                res.innerHTML += fb + ", ";
+            }
+        }
+    }
+    function clrNum() {
+        res.innerHTML = "";
+    }
+    /*
+    function genHndK() {
+        for (let fb = 1; fb <= 100000; fb++) {
+            if (fb % 15 == 0) {
+                res.innerHTML += "FizzBuzz, ";
+            }
+            else if (fb % 3 == 0) {
+                res.innerHTML += "Fizz, ";
+            }
+            else if (fb % 5 == 0) {
+                res.innerHTML +="Buzz, ";
+            }
+            else if (fb) {
+                res.innerHTML += fb + ", ";
+            }
+        }
+    }
+    */
+</script>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(0, 21, 41);
+        color: whitesmoke;
+        margin: 5em;
+    }
+</style>
